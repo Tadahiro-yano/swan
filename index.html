@@ -1,24 +1,214 @@
 <!doctype html>
 <html lang="ja">
 <body>
-    <section class="name">
-        <h1>Tadahiro Yano</h1>
-        <h1>Kyoto university</h1>
+<div class="bg">
+    <div class="bg-tp">
+        <p>Tadahiro Yano</p>
         <h1>Electrical Engineering</h1>
-    </section>
+    </div>
+</div> 
+<section class="wrapper2">
+    <div class="container">
+        <div class="content">
+            <div class="content-item">
+                <img src="kiyomizu.jpg" class="image">
+            </div>    
+            <div class="content-item">
+                <div class="text">
+                    <h2 class="heading">Hometown</h2>
+                    <p>京都出身です。お気に入りの場所は清水寺です。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper3">
+    <div class="container">
+        <div class="content">
+            <div class="content-item">
+                <img src="roji.jpg" class="image">
+            </div>    
+            <div class="content-item">
+                <div class="text">
+                    <h2 class="heading">Photography</h2>
+                    <p>趣味は旅行とカメラです。この写真は、台湾の九分に行ったときに撮影したものです。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper4">
+    <div class="container">
+        <div class="content">
+            <h2 class="heading">Pet</h2>
+            <div class="list">
+                <div class="list-item">
+                    <img src="momo.jpg" class="image">
+                    <div class="text">ペットのモモです。家の中を元気に歩き回ります。</div>
+                </div>
+                <div class="list-item">
+                    <img src="momo2.jpg" class="image">
+                    <div class="text">カットして服を着せてあげました。</div>
+                </div>    
+                <div class="list-item">
+                    <img src="momo3.jpg" class="image">
+                    <div class="text">つぶらな瞳がかわいいです。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
 <style>
-    body{
-      background-image:url("./tenbou.jpg");
-      background-size:cover;
-      background-repeat:no-repeat;
-      text-align:center;
-  }
-    .name{
-      font-size:32px;
-      color:#ffffff;
-      text-align:center;
-      line-height:40px
-  }
+    .bg {
+        width: 100%;
+        height: 460px;
+        background-image:url("beisanzu.jpg");          
+        background-size: cover;               /* 全画面 */
+        background-attachment: scroll;        
+        background-position: center center;
+        width: 100%;
+        height: 100vh;
+    }
+    .bg-tp {
+          height: 100%;
+          background: rgba(255,255,255,0.6);
+    }
+    .bg p {
+        font-size: 32px;
+        color: #333;
+        text-align: center;
+        line-height: 460px;
+    }
+    .wrapper2{
+        width:100%;
+        background-color:#fafafa;
+    }
+    .wrapper2 .container{
+        max-width:1000px;
+        margin:0px auto;
+        padding:80px 0px;
+    }
+    /* content */
+    @media (min-width: 992px) {
+        .wrapper2 .container .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .wrapper2 .content-item {
+        width:100%;
+    }
+    @media (min-width: 992px) {
+        .wrapper2 .content-item {
+            width:50%;
+        }
+    }
+    .wrapper2 .image{
+        display:block;
+        max-width:100%;
+        margin:0px auto;
+    }
+    .wrapper2 .text{
+        padding:50px;
+    }
+    .wrapper2 .text .heading{
+        margin:0px 0px 40px 0px;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+    }
+    /* container */
+    .wrapper3{
+        width:100%;
+        background-color:#fafafa;
+    }
+    .wrapper3 .container{
+        max-width:1000px;
+        margin:0px auto;
+        padding:80px 0px;
+    }
+    /* content */
+    @media (min-width: 992px) {
+        .wrapper3 .container .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    /* PC時のみ順番を入れ替える */
+    @media (min-width: 992px) {
+        .wrapper3 .content {
+            flex-direction:row-reverse;
+        }
+    }
+    .wrapper3 .content-item {
+        width:100%;
+    }
+    @media (min-width: 992px) {
+        .wrapper3 .content-item {
+            width:50%;
+        }
+    }
+    .wrapper3 .image{
+        display:block;
+        max-width:100%;
+        margin:0px auto;
+    }
+    .wrapper3 .text{
+        padding:50px;
+    }
+    .wrapper3 .text .heading{
+        margin:0px 0px 40px 0px;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+    }
+    .wrapper4{
+        width:100%;
+    }
+    .wrapper4 .container{
+        max-width:1000px;
+        margin:0px auto;
+        padding:80px 0px;
+    }
+    /* content */
+    .wrapper4 .content .heading{
+        margin:0px 0px 40px 0px;
+        font-size: 24px;
+        font-weight: normal;
+        text-align: center;
+    }
+    @media (min-width: 992px) {
+        .wrapper4 .content .list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .wrapper4 .content .list-item {
+        margin:50px 0px;
+        padding:0px 50px;
+        text-align:center;
+    }
+    @media (min-width: 992px) {
+        .wrapper4 .content .list-item {
+            margin:0px;
+            width:calc(100% / 3);
+        }
+    }
+    .wrapper4 .content .list-item .image{
+        display:block;
+        width:100%;
+        max-width:300px;
+        margin:0px auto 20px auto;
+        border-radius:100%;
+    }
+    .wrapper4 .content .list-item .text{
+        line-height:1.8rem;
+        font-size:0.8rem;
+        color:#666666;
+    }  
 </style>
 </body>
 </html>
